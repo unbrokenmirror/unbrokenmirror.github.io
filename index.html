@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Unbroken Mirror: Conversations on Awakening</title>
+    <meta name="description" content="Discover the profound secret hiding in plain sight: You are already what you seek. 27 conversations on recognizing your true nature as pure awareness.">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #d4af37;
+            --warm-gold: #c9aa71;
+            --deep-brown: #1a252f;
+            --medium-brown: #2c3e50;
+            --soft-gray: #6b705c;
+            --light-cream: #fdfcfb;
+            --warm-cream: #f8f6f0;
+            --elegant-beige: #ebe4d8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--medium-brown);
+            background: linear-gradient(135deg, var(--light-cream) 0%, var(--warm-cream) 50%, var(--elegant-beige) 100%);
+            min-height: 100vh;
+            /* Enhanced font weight for better mobile readability */
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-brown);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--soft-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(201, 170, 113, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--soft-gray);
+            margin-bottom: 2rem;
+            font-weight: 400; /* Increased from 300 */
+            letter-spacing: 0.5px;
+        }
+
+        .hero-tagline {
+            font-size: 1.4rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Email Signup Section */
+        .email-signup {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .email-signup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .email-signup-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-signup h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.2rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .email-signup p {
+            font-size: 1.1rem;
+            color: var(--soft-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400; /* Enhanced for mobile */
+            line-height: 1.7;
+        }
+
+        /* MailerLite Form Styles */
+        .email-form {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50px;
+            font-size: 1rem;
+            background: white;
+            transition: all 0.3s ease;
+            outline: none;
+            font-weight: 400;
+        }
+
+        .email-input:focus {
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .email-submit {
+            padding: 1rem 2rem;
+            background: var(--primary-gold);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 140px;
+        }
+
+        .email-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .email-submit:hover::before {
+            left: 100%;
+        }
+
+        .email-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            background: var(--warm-gold);
+        }
+
+        .privacy-note {
+            font-size: 0.9rem;
+            color: var(--soft-gray);
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        /* Book Showcase */
+        .book-showcase {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .book-cover {
+            text-align: center;
+            position: relative;
+        }
+
+        .book-cover svg {
+            max-width: 350px;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(26, 37, 47, 0.15));
+            transition: transform 0.3s ease;
+        }
+
+        .book-image {
+            max-width: 350px;
+            height: auto;
+            filter: drop-shadow(0 20px 40px rgba(26, 37, 47, 0.15));
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .book-cover:hover .book-image {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .book-info h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .book-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--medium-brown);
+            font-weight: 400; /* Enhanced for mobile */
+        }
+
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(212, 175, 55, 0.2) 0%, transparent 100%);
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* About the Author Section */
+        .about-author {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .author-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .author-photo {
+            text-align: center;
+            position: relative;
+        }
+
+        .author-image {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 12px;
+            filter: drop-shadow(0 15px 35px rgba(26, 37, 47, 0.12));
+            transition: transform 0.3s ease;
+        }
+
+        .author-photo:hover .author-image {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .author-content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .author-bio {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--medium-brown);
+            font-weight: 400;
+        }
+
+        .author-bio p {
+            margin-bottom: 1.5rem;
+        }
+
+        .author-bio p:last-child {
+            margin-bottom: 0;
+        }
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--warm-gold));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(26, 37, 47, 0.1);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--soft-gray);
+            line-height: 1.6;
+            font-weight: 400; /* Enhanced for mobile */
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--deep-brown) 0%, var(--medium-brown) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400; /* Enhanced for mobile */
+        }
+
+        .buy-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-gold);
+            color: white;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 3rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-gold);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary-gold);
+            opacity: 0.3;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: var(--medium-brown);
+            font-weight: 400; /* Enhanced for mobile */
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--soft-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'Libre Baskerville', serif;
+            margin-bottom: 1rem;
+            color: var(--primary-gold);
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 400; /* Enhanced for mobile */
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Enhanced Mobile-Specific Improvements */
+        @media (max-width: 768px) {
+            /* Enhance font weights for mobile readability */
+            body {
+                font-weight: 500; /* Stronger weight on mobile */
+            }
+
+            .hero .subtitle,
+            .book-description,
+            .feature-card p,
+            .testimonial p,
+            .footer-section p,
+            .email-signup p,
+            .cta p {
+                font-weight: 500; /* Stronger weight for better mobile readability */
+                color: var(--deep-brown); /* Darker color for better contrast */
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .email-input {
+                min-width: 100%;
+                margin-bottom: 1rem;
+                font-weight: 500; /* Enhanced for mobile */
+            }
+
+            .email-submit {
+                width: 100%;
+            }
+
+            .buy-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .author-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .author-image {
+                max-width: 200px;
+            }
+
+            .author-content h2 {
+                font-size: 2rem;
+            }
+
+            .author-bio {
+                font-weight: 500;
+                color: var(--deep-brown);
+                text-align: left;
+                padding: 0 1rem;
+            }
+            .email-signup {
+                padding: 40px 0;
+            }
+
+            .email-signup h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .email-signup p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">The Unbroken Mirror</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#author">About Author</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#buy">Get the Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>The Unbroken Mirror</h1>
+                    <p class="subtitle">Conversations on Awakening</p>
+                    <p class="hero-tagline">What if the deepest spiritual truths were hiding in plain sight, waiting to be recognized in your most ordinary moments?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Email Signup Section -->
+        <section class="email-signup" id="newsletter">
+            <div class="container">
+                <div class="email-signup-content fade-in">
+                    <h2>Get Notified When "The Unbroken Mirror" Launches</h2>
+                    <p>Join our community of seekers and be the first to know when the book becomes available. Plus, receive exclusive insights on awakening and consciousness.</p>
+                    
+                    <!-- MailerLite Form Integration -->
+                    <!-- Replace this with your actual MailerLite embed code -->
+                    <div class="ml-embedded" data-form="your-form-id">
+                        <form class="email-form" action="https://assets.mailerlite.com/jsonp/your-account-id/forms/your-form-id/subscribe" method="post">
+                            <input type="email" class="email-input" name="fields[email]" placeholder="Enter your email address" required>
+                            <button type="submit" class="email-submit">Notify Me</button>
+                        </form>
+                    </div>
+                    
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time. Powered by MailerLite.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="book-showcase" id="about">
+            <div class="container">
+                <div class="showcase-grid">
+                    <div class="book-cover fade-in">
+                        <img src="UnbrokenMirror_ConversationsOnAwakening.jpg" alt="The Unbroken Mirror: Conversations on Awakening book cover" class="book-image">
+                    </div>
+                    
+                    <div class="book-info fade-in">
+                        <h2>You Are Already What You Seek</h2>
+                        <div class="book-description">
+                            <p><em>The Unbroken Mirror</em> presents <span class="highlight-text">27 profound dialogues</span> that gently guide you from the basic question "Who am I?" to the recognition of your true nature as pure awareness.</p>
+                            
+                            <p>Through contemporary conversations between genuine seekers and a wise teacher, discover why you've been looking everywhere for what you already are.</p>
+                            
+                            <p>This isn't another book about enlightenment – <strong>it's an invitation to recognize the enlightenment you already are.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="fade-in">What Makes This Book Different</h2>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <h3>Fresh, Modern Language</h3>
+                        <p>Ancient wisdom made instantly accessible through contemporary language that speaks to today's seekers without complex jargon or exotic terminology.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <h3>No Practices Required</h3>
+                        <p>Everything points to your immediate experience. No meditation retreats, special states, or years of training needed – just honest looking at what's already here.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <h3>Real-Life Applications</h3>
+                        <p>Each conversation addresses practical concerns: difficult emotions, relationships, work stress, and life transitions from the perspective of your true nature.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <h3>Progressive Structure</h3>
+                        <p>Meets you wherever you are on your journey, building naturally from basic questions to the deepest recognition of what you truly are.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <h3>Direct Pointers</h3>
+                        <p>Immediate contemplations and investigations you can explore right now, pointing directly to the awareness you have never not been.</p>
+                    </div>
+                    
+                    <div class="feature-card fade-in">
+                        <h3>End of Seeking</h3>
+                        <p>Discover why spiritual seeking keeps you from finding what you already are, and how recognition transforms the search into natural being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Author Section -->
+        <section class="about-author" id="author">
+            <div class="container">
+                <div class="author-grid">
+                    <div class="author-photo fade-in">
+                        <img src="author.png" alt="M.G. Ertosun, PhD - Author of The Unbroken Mirror" class="author-image">
+                    </div>
+                    
+                    <div class="author-content fade-in">
+                        <h2>About the Author</h2>
+                        <div class="author-bio">
+                            <p>Born along the Mediterranean coast and later drawn to California, the author spent years in the academic halls of Stanford University, earning advanced degrees in science and engineering, including two master's degrees, a doctorate and postdoctoral & research fellowships at Stanford School of Medicine. The author's journey continued into Silicon Valley's startup world, where technology and innovation became daily companions.</p>
+                            
+                            <p>But alongside this external journey, a quieter exploration was unfolding. The same curiosity that drove scientific research began turning inward, asking the most fundamental questions: Who am I? What is real? How shall I live?</p>
+                            
+                            <p>This inquiry led through various wisdom traditions—Buddhism and Christianity, Sufism and Judaism, Vedanta and Taoism. Not as a collector of beliefs or practices, but as a simple investigation into what remains constant across all seeking. Through years of meditation and contemplation, the same recognition kept emerging: <span class="highlight-text">what we seek, we already are.</span></p>
+                            
+                            <p>The conversations in "The Unbroken Mirror: Conversations on Awakening" arise from a life that has moved between two worlds—the rigorous landscape of scientific inquiry and the timeless territory of spiritual recognition.</p>
+                            
+                            <p>These conversations aren't the result of special qualifications. They arise from the same awareness that is reading these words right now—the ordinary, obvious presence that we all are before we think we are anything in particular.</p>
+                            
+                            <p>Whether analyzing data in a laboratory or sitting in silent meditation, whether navigating startup challenges or exploring ancient wisdom texts, the same awareness was always present, always looking, always recognizing itself through infinite forms of experience.</p>
+                            
+                            <p>The author's academic background brings clarity and precision to these conversations, while years of spiritual inquiry provide the understanding that what we truly are cannot be grasped by the mind—it can only be recognized as what we already, always are.</p>
+                            
+                            <p>These dialogues emerge from the recognition that consciousness exploring itself through science and consciousness exploring itself through spirituality are the same exploration. The electron microscope and the meditation cushion point toward the same mystery: the aware presence in which all experience arises and dissolves.</p>
+                            
+                            <p>The author continues to live and work in California, writing and sharing these conversations not as a teacher with special knowledge, but as awareness celebrating its own recognition through the beautiful play of apparent dialogue.</p>
+                            
+                            <p style="font-style: italic; color: var(--primary-gold); font-weight: 500;">After all, who is there to be an author when these words are consciousness writing about itself to itself?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <h2 class="fade-in">What Readers Are Experiencing</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial fade-in">
+                        <p>This book doesn't teach you about truth – it points you directly to what you are. Every conversation felt like coming home to myself.</p>
+                        <div class="testimonial-author">— Sarah M.</div>
+                    </div>
+                    
+                    <div class="testimonial fade-in">
+                        <p>Finally, someone who speaks about non-duality in language I can understand and apply to my actual life. No more confusion, just clear recognition.</p>
+                        <div class="testimonial-author">— Michael R.</div>
+                    </div>
+                    
+                    <div class="testimonial fade-in">
+                        <p>I've read a lot of spiritual books, but this one made everything click. The recognition was immediate and obvious once I knew where to look.</p>
+                        <div class="testimonial-author">— Jennifer L.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="buy">
+            <div class="container">
+                <h2 class="fade-in">Stop Seeking. Start Being.</h2>
+                <p class="fade-in">The truth you seek is present right now, reading these very words. Your only choice is whether to recognize it today... or keep seeking for what you already are.</p>
+                
+                <div class="buy-buttons fade-in">
+                    <a href="https://amazon.com/dp/your-book-id" class="btn" target="_blank">Buy on Amazon</a>
+                    <a href="https://amazon.com/kindle/dp/your-kindle-id" class="btn btn-secondary" target="_blank">Kindle Edition</a>
+                </div>
+                
+                <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">Available in Paperback, Hardcover, and Digital formats</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About the Book</h3>
+                    <p>The Unbroken Mirror offers 27 conversations that guide you to recognize your true nature as pure awareness, ending the search for what you already are.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <p>Non-Dual Spirituality • Consciousness • Present Moment Awareness • Spiritual Self-Inquiry • Philosophy • Mindfulness</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Perfect For</h3>
+                    <p>Longtime seekers ready to stop seeking, newcomers to non-dual understanding, readers of Eckhart Tolle, Rupert Spira, and Byron Katie.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Unbroken Mirror. All rights reserved. | A guide to recognizing your true nature</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Book cover hover effect enhancement
+        const bookCover = document.querySelector('.book-cover .book-image');
+        if (bookCover) {
+            bookCover.addEventListener('mouseenter', () => {
+                bookCover.style.transform = 'translateY(-15px) scale(1.05) rotateY(5deg)';
+                bookCover.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            bookCover.addEventListener('mouseleave', () => {
+                bookCover.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
+            });
+        }
+
+        // Add subtle parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Initialize all fade-in elements as visible if they're already in view
+        setTimeout(() => {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                }
+            });
+        }, 100);
+
+        // MailerLite form handling (basic version)
+        document.querySelector('.email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // This is a placeholder - you'll replace this with actual MailerLite integration
+            if (email) {
+                alert('Thank you! We\'ll notify you when the book launches.');
+                this.querySelector('input[type="email"]').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
