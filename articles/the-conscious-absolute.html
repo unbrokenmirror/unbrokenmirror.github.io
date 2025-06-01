@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Conscious Absolute< - The Unbroken Mirror</title>
+    <meta name="description" content="[ARTICLE_DESCRIPTION]">
+    <meta name="keywords" content="consciousness, awakening, non-duality, spiritual inquiry, present moment awareness">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #d4af37;
+            --warm-gold: #c9aa71;
+            --deep-brown: #1a252f;
+            --medium-brown: #2c3e50;
+            --soft-gray: #6b705c;
+            --light-cream: #fdfcfb;
+            --warm-cream: #f8f6f0;
+            --elegant-beige: #ebe4d8;
+            --text-color: #333333;
+            --light-gray: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--light-cream) 0%, var(--warm-cream) 50%, var(--elegant-beige) 100%);
+            min-height: 100vh;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .logo {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--deep-brown);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--primary-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--soft-gray);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Article Content */
+        .article-header {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            margin-top: 0;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--soft-gray);
+        }
+
+        .article-date {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .article-category {
+            color: var(--primary-gold);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+        }
+
+        .article-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .article-subtitle {
+            font-size: 1.2rem;
+            color: var(--medium-brown);
+            font-weight: 400;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--warm-gold));
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Article Body */
+        .article-body {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 60px 0;
+        }
+
+        .article-content {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        /* Auto-formatted content styles */
+        .auto-content {
+            white-space: pre-line;
+        }
+
+        .auto-content p {
+            margin-bottom: 1.8rem;
+            text-align: justify;
+        }
+
+        .auto-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .auto-content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.6rem;
+            color: var(--deep-brown);
+            margin: 3rem 0 1.5rem 0;
+            line-height: 1.3;
+        }
+
+        .auto-content h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.3rem;
+            color: var(--medium-brown);
+            margin: 2.5rem 0 1rem 0;
+            line-height: 1.4;
+        }
+
+        .auto-content blockquote {
+            background: var(--light-gray);
+            border-left: 4px solid var(--primary-gold);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            position: relative;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .auto-content blockquote::before {
+            content: '"';
+            position: absolute;
+            top: -5px;
+            left: 15px;
+            font-size: 3rem;
+            color: var(--primary-gold);
+            opacity: 0.5;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .auto-content blockquote p {
+            margin-bottom: 0;
+            color: var(--medium-brown);
+        }
+
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(212, 175, 55, 0.2) 0%, transparent 100%);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .emphasis {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        /* Drop Cap */
+        .auto-content p:first-of-type::first-letter {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            float: left;
+            line-height: 3rem;
+            margin: 0.2rem 0.5rem 0 0;
+        }
+
+        /* Contemplation Boxes */
+        .contemplation {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(201, 170, 113, 0.1) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .contemplation::before {
+            content: '✦';
+            position: absolute;
+            top: -12px;
+            left: 2rem;
+            background: var(--warm-cream);
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            padding: 0 0.5rem;
+        }
+
+        .contemplation h4 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contemplation p {
+            margin-bottom: 1rem;
+            color: var(--medium-brown);
+        }
+
+        .contemplation p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Article Navigation */
+        .article-navigation {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 2rem;
+            background: var(--primary-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-button:hover::before {
+            left: 100%;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            background: var(--warm-gold);
+        }
+
+        .nav-button.secondary {
+            background: transparent;
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .nav-button.secondary:hover {
+            background: var(--primary-gold);
+            color: white;
+        }
+
+        .back-to-articles {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Share Section */
+        .share-section {
+            background: var(--light-gray);
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .share-title {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--soft-gray);
+            border-radius: 25px;
+            text-decoration: none;
+            color: var(--soft-gray);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .share-button:hover {
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-brown);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .article-header {
+                padding: 40px 0 30px;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .article-content {
+                font-size: 1rem;
+                padding: 0 10px;
+            }
+
+            .auto-content p:first-of-type::first-letter {
+                font-size: 3rem;
+                line-height: 2.5rem;
+                margin-right: 0.3rem;
+            }
+
+            .contemplation {
+                margin: 2rem 0;
+                padding: 1.5rem;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-button {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .share-button {
+                width: 200px;
+                justify-content: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, .article-navigation, .share-section, footer {
+                display: none;
+            }
+
+            .article-body {
+                background: white;
+            }
+
+            .article-content {
+                max-width: 100%;
+                font-size: 12pt;
+                line-height: 1.6;
+            }
+
+            .contemplation {
+                background: #f9f9f9;
+                border: 1px solid #ccc;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation on load */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .fade-in.delay-1 { animation-delay: 0.2s; }
+        .fade-in.delay-2 { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="reading-progress"></div>
+    
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">The Unbroken Mirror</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#articles">Articles</a></li>
+                <li><a href="../index.html#author">About Author</a></li>
+                <li><a href="../index.html#testimonials">Reviews</a></li>
+                <li><a href="../index.html#buy">Get the Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="article-header">
+            <div class="container">
+                <div class="article-meta fade-in">
+                    <span class="article-date">Jan 2025</span>
+                    <span class="article-category">Consciousness</span>
+                </div>
+                <h1 class="article-title fade-in delay-1">The Conscious Absolute</h1>
+                <p class="article-subtitle fade-in delay-2">A Synthesis of Analytic Idealism and Kashmiri Shaivism </p>
+                <p class="article-subtitle fade-in delay-2"> - </p>
+                <p class="article-subtitle fade-in delay-2">M.G. Ertosun, PhD</p>
+            </div>
+        </section>
+
+        <section class="article-body">
+            <div class="container">
+                <div class="article-content">
+                    <!-- 
+                    ========================================
+                    PASTE ARTICLE TEXT BELOW THIS LINE
+                    =======================================
+
+                    Special markers for formatting:
+                    
+                    
+                    Headings: Start lines with ## for main headings or ### for subheadings
+                    • Quotes: Start lines with > for blockquotes
+                    • Contemplations: Wrap reflection sections with [CONTEMPLATION] and [/
+                    CONTEMPLATION]
+                    • Bold: Use **bold text**
+                    • Italics: Use *italic text*
+                    • Highlights: Use ++highlighted text++ for golden highlights
+                    • Emphasis: Use ~~emphasized text~~ for golden emphasis
+                    
+                    -->
+                    
+                    <div class="auto-content" id="article-text">
+
+
+
+
+
+
+
+
+
+The quest for ultimate reality has yielded a rich tapestry of philosophical systems, each offering a unique lens through which to comprehend existence. Analytic Idealism, with its rigorous emphasis on the mind-dependent nature of reality, provides a compelling framework for understanding consciousness as fundamental. Simultaneously, the profound insights of Kashmiri Shaivism illuminate a path towards a non-dualistic, conscious absolute, brimming with creative power. By synthesizing the epistemological clarity of Analytic Idealism with the ontological depth and spiritual experientiality of Kashmiri Shaivism, we can forge a new philosophical framework: ++**The Conscious Absolute**++. This framework posits that reality, in its deepest essence, is an infinitely creative, self-aware consciousness, from which all apparent multiplicity arises and into which it ultimately dissolves.
+
+Analytic Idealism, championed by figures like Bernardo Kastrup, persuasively argues that what we perceive as an objective, independent material world is, in fact, a construct within or an appearance to consciousness. Its strength lies in dissecting the logical inconsistencies of materialism and demonstrating how the very act of knowing presupposes a conscious subject. The **"hard problem of consciousness"**, how physical matter could possibly give rise to subjective experience, is elegantly dissolved when consciousness is posited as primary. Our shared reality, then, is understood as a shared mentation, a collective dream, or a modulated aspect of a universal mind. This provides a robust foundation for rejecting naive realism and embracing the centrality of subjective experience.
+
+However, where Analytic Idealism often remains somewhat agnostic on the nature of this fundamental consciousness, Kashmiri Shaivism steps in with breathtaking audacity and experiential insight. Far from a mere philosophical abstraction, Kashmiri Shaivism, particularly as articulated in the Pratyabhijñā system, proclaims that reality is Paramaśiva, the supreme, non-dual consciousness. This Paramaśiva is not a passive observer but an active, vibrant, and eternally creative force, characterized by citi-śakti (consciousness-power). It is simultaneously transcendent (beyond all categories) and immanent (present within all creation). The universe is seen as the playful emanation of Paramaśiva's own self-unfolding, a grand dance of Shiva and Shakti, consciousness and its dynamic power. Crucially, Kashmiri Shaivism emphasizes that the individual self (anu) is not separate from this supreme consciousness but is, in essence, Paramaśiva itself, veiled by its own creative power. Liberation, or mokṣa, is therefore not about attaining something new, but recognizing one's inherent identity with the Absolute.
+
+The Conscious Absolute synthesizes these perspectives by proposing that the fundamental consciousness of Analytic Idealism is not merely a passive ground but is, in fact, the dynamic, self-aware, and infinitely creative Paramaśiva of Kashmiri Shaivism. Our individual minds, rather than being isolated private realms, are localized and modulated expressions of this singular, universal consciousness. The "objective" world we perceive is not an external, independent entity, but a shared experience generated and sustained by the collective mentation of this Conscious Absolute, much like different aspects of a single dream-mind.
+
+[CONTEMPLATION]
+Consider the implications: If all reality is a manifestation of the Conscious Absolute, then the very fabric of existence is imbued with consciousness and intention. This provides a profound answer to the problem of meaning and purpose that often plagues materialist frameworks. The universe is not a random accident, but a grand, evolving expression of divine consciousness. Furthermore, the ethical implications are profound. If every sentient being is a manifestation of the Conscious Absolute, then compassion and interconnectedness become inherent truths, not merely moral injunctions. Harm to another is, in essence, harm to oneself, as all are ripples in the same oceanic consciousness.
+[/CONTEMPLATION]
+
+Epistemologically, The Conscious Absolute suggests that true knowledge is not merely intellectual comprehension but a process of recognition (pratyabhijñā). Just as Analytic Idealism points to the limitations of empirical observation for understanding the ultimate nature of reality, The Conscious Absolute emphasizes that the deepest truths are accessed through introspection, meditative practices, and the direct experience of one's identity with the Absolute. The scientific method, while invaluable for understanding the regularities within the manifested reality, operates within the framework of the Conscious Absolute, not independently of it. It describes the patterns of experience generated by the Absolute, but cannot apprehend the Absolute itself through purely external means.
+
+The creative aspect of Paramaśiva, citi-śakti, offers a compelling explanation for the apparent laws of physics and the emergence of complex systems. These are not brute facts but the inherent tendencies and self-organizing principles within the Conscious Absolute's own mentation. The universe is a grand thought, a cosmic imagination, and the laws governing it are the internal consistency of that divine ideation. Consciousness is not an emergent property of complexity but the very ground from which complexity emerges.
+
+In conclusion, The Conscious Absolute offers a robust and comprehensive philosophical framework that transcends the limitations of both purely analytical approaches and purely experiential spiritual systems. By grounding the epistemological insights of Analytic Idealism in the rich ontological and experiential soil of Kashmiri Shaivism, it provides a coherent understanding of reality as a non-dual, infinitely creative, and self-aware consciousness. This framework not only resolves enduring philosophical problems but also offers a profound vision for human existence, emphasizing our inherent unity with the Absolute and the transformative power of self-recognition. The universe is not merely observed by consciousness; it is consciousness, in its endless, playful, and magnificent unfolding.
+
+
+
+
+
+
+
+                    </div>
+                    
+                    <!-- 
+                    ========================================
+                    PASTE YOUR ARTICLE TEXT ABOVE THIS LINE
+                    ========================================
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <section class="share-section">
+            <div class="container">
+                <h3 class="share-title">Share This Article</h3>
+                <div class="share-buttons">
+                    <a href="#" class="share-button" onclick="shareTwitter()">
+                        <span>Share on Twitter</span>
+                    </a>
+                    <a href="#" class="share-button" onclick="shareLinkedIn()">
+                        <span>Share on LinkedIn</span>
+                    </a>
+                    <a href="#" class="share-button" onclick="shareFacebook()">
+                        <span>Share on Facebook</span>
+                    </a>
+                    <a href="#" class="share-button" onclick="copyLink()">
+                        <span>Copy Link</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-navigation">
+            <div class="container">
+                <div class="nav-buttons">
+                    <a href="beyond-seeker-sought.html" class="nav-button secondary">
+                        <span>← Previous Article</span>
+                    </a>
+                    <a href="timeless-nature-now.html" class="nav-button">
+                        <span>Next Article →</span>
+                    </a>
+                </div>
+                <div class="back-to-articles">
+                    <a href="../index.html#articles" class="nav-button secondary">
+                        <span>← Back to All Articles</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="../index.html" class="footer-link">Home</a>
+                <a href="../index.html#about" class="footer-link">About the Book</a>
+                <a href="../index.html#articles" class="footer-link">Articles</a>
+                <a href="../index.html#author" class="footer-link">About Author</a>
+                <a href="../index.html#buy" class="footer-link">Get the Book</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Unbroken Mirror. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-format the article content
+        function formatArticleContent() {
+            const content = document.getElementById('article-text');
+            if (!content) return;
+            
+            let text = content.textContent.trim();
+            
+            // Split into lines and process
+            let lines = text.split('\n');
+            let formattedHTML = '';
+            let inParagraph = false;
+            let inContemplation = false;
+            let contemplationContent = '';
+            
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i].trim();
+                
+                // Skip empty lines but use them to break paragraphs
+                if (line === '') {
+                    if (inParagraph) {
+                        formattedHTML += '</p>\n';
+                        inParagraph = false;
+                    }
+                    continue;
+                }
+                
+                // Handle contemplation blocks
+                if (line === '[CONTEMPLATION]') {
+                    if (inParagraph) {
+                        formattedHTML += '</p>\n';
+                        inParagraph = false;
+                    }
+                    inContemplation = true;
+                    contemplationContent = '';
+                    continue;
+                }
+                
+                if (line === '[/CONTEMPLATION]') {
+                    if (inContemplation) {
+                        formattedHTML += '<div class="contemplation">\n';
+                        formattedHTML += '<h4>Contemplation</h4>\n';
+                        formattedHTML += formatInlineText(contemplationContent);
+                        formattedHTML += '</div>\n';
+                        inContemplation = false;
+                        contemplationContent = '';
+                    }
+                    continue;
+                }
+                
+                // If we're in a contemplation block, collect the content
+                if (inContemplation) {
+                    contemplationContent += line + '\n';
+                    continue;
+                }
+                
+                // Handle headings
+                if (line.startsWith('## ')) {
+                    if (inParagraph) {
+                        formattedHTML += '</p>\n';
+                        inParagraph = false;
+                    }
+                    formattedHTML += '<h2>' + formatInlineText(line.substring(3)) + '</h2>\n';
+                    continue;
+                }
+                
+                if (line.startsWith('### ')) {
+                    if (inParagraph) {
+                        formattedHTML += '</p>\n';
+                        inParagraph = false;
+                    }
+                    formattedHTML += '<h3>' + formatInlineText(line.substring(4)) + '</h3>\n';
+                    continue;
+                }
+                
+                // Handle blockquotes
+                if (line.startsWith('> ')) {
+                    if (inParagraph) {
+                        formattedHTML += '</p>\n';
+                        inParagraph = false;
+                    }
+                    formattedHTML += '<blockquote><p>' + formatInlineText(line.substring(2)) + '</p></blockquote>\n';
+                    continue;
+                }
+                
+                // Regular paragraph text
+                if (!inParagraph) {
+                    formattedHTML += '<p>';
+                    inParagraph = true;
+                }
+                
+                formattedHTML += formatInlineText(line) + ' ';
+            }
+            
+            // Close any open paragraph
+            if (inParagraph) {
+                formattedHTML += '</p>\n';
+            }
+            
+            content.innerHTML = formattedHTML;
+        }
+        
+        // Format inline text (bold, italic, etc.)
+        function formatInlineText(text) {
+            // Bold text **text**
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Italic text *text*
+            text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            
+            // Highlight text ++text++
+            text = text.replace(/\+\+(.*?)\+\+/g, '<span class="highlight-text">$1</span>');
+            
+            // Emphasis text ~~text~~
+            text = text.replace(/~~(.*?)~~/g, '<span class="emphasis">$1</span>');
+            
+            return text;
+        }
+        
+        // Initialize formatting when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            formatArticleContent();
+            
+            // Initialize fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const article = document.querySelector('.article-content');
+            const progressBar = document.querySelector('.reading-progress');
+            
+            if (article && progressBar) {
+                const articleTop = article.offsetTop;
+                const articleHeight = article.offsetHeight;
+                const scrolled = window.pageYOffset - articleTop;
+                const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
+                
+                progressBar.style.width = (progress * 100) + '%';
+            }
+        });
+
+        // Share functions
+        function shareTwitter() {
+            const text = document.querySelector('.article-title').textContent;
+            const url = window.location.href;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function shareLinkedIn() {
+            const url = window.location.href;
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function shareFacebook() {
+            const url = window.location.href;
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const button = event.target.closest('.share-button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<span>✓ Link Copied!</span>';
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+
+        // Smooth header transition on scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    </script>
+</body>
+</html>
