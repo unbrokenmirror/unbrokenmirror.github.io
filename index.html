@@ -689,10 +689,11 @@
         /* Enhanced Mobile-Specific Improvements */
         @media (max-width: 768px) {
             body {
-                font-weight: 500;
+                font-weight: 600;
                 color: var(--deep-brown);
             }
 
+            /* Make ALL body text much bolder and darker on mobile */
             .hero .subtitle,
             .book-description,
             .book-description p,
@@ -704,14 +705,48 @@
             .article-excerpt,
             .author-bio,
             .author-bio p,
-            .articles-intro {
-                font-weight: 600 !important;
+            .articles-intro,
+            .article-meta,
+            .testimonial-author,
+            .privacy-note {
+                font-weight: 700 !important;
+                color: #1a252f !important;
+                text-shadow: 0 0 1px rgba(26, 37, 47, 0.3) !important;
+            }
+
+            /* Extra bold for highlighted text */
+            .highlight-text {
+                font-weight: 800 !important;
+                color: #1a252f !important;
+                text-shadow: 0 0 1px rgba(26, 37, 47, 0.5) !important;
+            }
+
+            /* Make headings even bolder */
+            .hero h1,
+            .book-info h2,
+            .features h2,
+            .articles h2,
+            .author-content h2,
+            .testimonials h2,
+            .cta h2,
+            .feature-card h3,
+            .article-card h3 {
+                font-weight: 800 !important;
+                color: #1a252f !important;
+            }
+
+            /* Ensure navigation text is bold too */
+            .nav-links a {
+                font-weight: 700 !important;
                 color: var(--deep-brown) !important;
             }
 
-            .highlight-text {
-                font-weight: 700 !important;
-                color: var(--deep-brown) !important;
+            /* Make footer text more readable */
+            .footer-section p,
+            .footer-section a,
+            .footer-bottom p {
+                font-weight: 600 !important;
+                color: rgba(255, 255, 255, 0.95) !important;
             }
 
             .nav-links {
