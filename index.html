@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Unbroken Mirror: Conversations on Awakening</title>
-    <meta name="description" content="Discover the profound secret hiding in plain sight: You are already what you seek. 27 conversations on recognizing your true nature as pure awareness.">
+    <title>The Unbroken Mirror Series: A Revolutionary Approach to Spiritual Understanding</title>
+    <meta name="description" content="Discover the profound secret hiding in plain sight: You are already what you seek. The groundbreaking Unbroken Mirror series guides you beyond seeking to simple recognition of your true nature.">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -204,57 +204,258 @@
             font-weight: 400;
         }
 
-        /* Book Showcase */
-        .book-showcase {
+        /* Series Showcase */
+        .series-showcase {
             padding: 80px 0;
             background: rgba(255, 255, 255, 0.7);
         }
 
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
-            align-items: center;
+        .series-intro {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        .book-cover {
-            text-align: center;
+        .series-intro h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.8rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .series-intro .subtitle {
+            font-size: 1.3rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .series-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--medium-brown);
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            font-weight: 400;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .book-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
             position: relative;
         }
 
-        .book-image {
-            max-width: 350px;
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--warm-gold));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(26, 37, 47, 0.15);
+        }
+
+        .book-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .book-cover-container {
+            text-align: center;
+            padding: 2rem 2rem 1rem 2rem;
+        }
+
+        .book-cover-image {
+            max-width: 200px;
             height: auto;
-            filter: drop-shadow(0 20px 40px rgba(26, 37, 47, 0.15));
+            filter: drop-shadow(0 15px 30px rgba(26, 37, 47, 0.2));
             transition: transform 0.3s ease;
             border-radius: 8px;
         }
 
-        .book-cover:hover .book-image {
-            transform: translateY(-10px) scale(1.02);
+        .book-card:hover .book-cover-image {
+            transform: translateY(-5px) scale(1.05);
         }
 
-        .book-info h2 {
+        .book-info {
+            padding: 1rem 2rem 2rem 2rem;
+        }
+
+        .book-number {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .book-info h3 {
             font-family: 'Libre Baskerville', serif;
-            font-size: 2.5rem;
+            font-size: 1.4rem;
             color: var(--deep-brown);
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
             line-height: 1.3;
         }
 
+        .book-subtitle {
+            font-size: 1rem;
+            color: var(--primary-gold);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
         .book-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
             color: var(--medium-brown);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
             font-weight: 400;
         }
 
-        .highlight-text {
-            background: linear-gradient(120deg, rgba(212, 175, 55, 0.2) 0%, transparent 100%);
-            padding: 0.2em 0.5em;
-            border-radius: 4px;
+        .book-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .book-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border: 2px solid var(--primary-gold);
+            border-radius: 25px;
+            text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-link.primary {
+            background: var(--primary-gold);
+            color: white;
+        }
+
+        .book-link.secondary {
+            background: transparent;
+            color: var(--primary-gold);
+        }
+
+        .book-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .book-link.primary:hover {
+            background: var(--warm-gold);
+        }
+
+        .book-link.secondary:hover {
+            background: var(--primary-gold);
+            color: white;
+        }
+
+        .coming-soon {
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .coming-soon::after {
+            content: 'Coming Soon';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(212, 175, 55, 0.95);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Series Benefits */
+        .series-benefits {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 80px 0;
+        }
+
+        .series-benefits h2 {
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.5rem;
+            color: var(--deep-brown);
+            margin-bottom: 3rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--warm-gold));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(26, 37, 47, 0.1);
+        }
+
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .benefit-card h3 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.3rem;
+            color: var(--deep-brown);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card p {
+            color: var(--soft-gray);
+            line-height: 1.6;
+            font-weight: 400;
         }
 
         /* Articles Section */
@@ -403,68 +604,6 @@
             color: white;
         }
 
-        .features {
-            padding: 80px 0;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2.5rem;
-            color: var(--deep-brown);
-            margin-bottom: 3rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--warm-gold));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(26, 37, 47, 0.1);
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .feature-card h3 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.3rem;
-            color: var(--deep-brown);
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: var(--soft-gray);
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
         /* About the Author Section */
         .about-author {
             padding: 80px 0;
@@ -517,6 +656,13 @@
 
         .author-bio p:last-child {
             margin-bottom: 0;
+        }
+
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(212, 175, 55, 0.2) 0%, transparent 100%);
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            font-weight: 500;
         }
 
         /* CTA Section */
@@ -695,9 +841,9 @@
 
             /* Make ALL body text much bolder and darker on mobile */
             .hero .subtitle,
+            .series-description,
             .book-description,
-            .book-description p,
-            .feature-card p,
+            .benefit-card p,
             .testimonial p,
             .footer-section p,
             .email-signup p,
@@ -723,14 +869,15 @@
 
             /* Make headings even bolder */
             .hero h1,
-            .book-info h2,
-            .features h2,
+            .series-intro h2,
+            .series-benefits h2,
             .articles h2,
             .author-content h2,
             .testimonials h2,
             .cta h2,
-            .feature-card h3,
-            .article-card h3 {
+            .benefit-card h3,
+            .article-card h3,
+            .book-info h3 {
                 font-weight: 800 !important;
                 color: #1a252f !important;
             }
@@ -753,13 +900,16 @@
                 display: none;
             }
 
-            .showcase-grid {
+            .books-grid {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
+            }
+
+            .series-intro h2 {
+                font-size: 2.2rem;
             }
 
             .buy-buttons {
@@ -818,6 +968,16 @@
             }
 
             .article-link {
+                flex: 1;
+                justify-content: center;
+                min-width: 120px;
+            }
+
+            .book-links {
+                justify-content: center;
+            }
+
+            .book-link {
                 flex: 1;
                 justify-content: center;
                 min-width: 120px;
@@ -998,13 +1158,14 @@
 <body>
     <header>
         <nav class="container">
-            <a href="#" class="logo">The Unbroken Mirror</a>
+            <a href="#" class="logo">The Unbroken Mirror Series</a>
             <ul class="nav-links">
-                <li><a href="#about">About Book</a></li>
+                <li><a href="#about">About Series</a></li>
+                <li><a href="#books">Books</a></li>
                 <li><a href="#articles">Articles</a></li>
                 <li><a href="#author">About Author</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#buy">Get the Book</a></li>
+                <li><a href="#buy">Get the Books</a></li>
             </ul>
         </nav>
     </header>
@@ -1013,9 +1174,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content fade-in">
-                    <h1>The Unbroken Mirror</h1>
-                    <p class="subtitle">Conversations on Awakening</p>
-                    <p class="hero-tagline">What if the deepest spiritual truths were hiding in plain sight, waiting to be recognized in your most ordinary moments?</p>
+                    <h1>The Unbroken Mirror Series</h1>
+                    <p class="subtitle">A Revolutionary Approach to Spiritual Understanding</p>
+                    <p class="hero-tagline">What if everything you've been seeking spiritually has been here all along, hiding in plain sight?</p>
                 </div>
             </div>
         </section>
@@ -1023,8 +1184,8 @@
         <section class="email-signup" id="newsletter">
             <div class="container">
                 <div class="email-signup-content fade-in">
-                    <h2>"The Unbroken Mirror" is now available on Amazon</h2>
-                    <p>Become part of our community of seekers and get early access to the latest updates and articles.</p>
+                    <h2>Join Our Community of Awakening</h2>
+                    <p>Get the latest updates on new books in the series, articles, and insights into the pathless path to recognition.</p>
                     
                     <div id="mlb2-26604202" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-26604202">
                         <div class="ml-form-align-center">
@@ -1046,7 +1207,7 @@
 
                                         <input type="hidden" name="ml-submit" value="1">
                                         <div class="ml-form-embedSubmit">
-                                            <button type="submit" class="primary">Notify Me</button>
+                                            <button type="submit" class="primary">Join Community</button>
                                             <button disabled="disabled" style="display: none;" type="button" class="loading">
                                                 <div class="ml-form-embedSubmitLoad"></div>
                                                 <span class="sr-only">Loading...</span>
@@ -1058,8 +1219,8 @@
 
                                 <div class="ml-form-successBody row-success" style="display: none">
                                     <div class="ml-form-successContent">
-                                        <h4>Thank you!</h4>
-                                        <p>You have successfully joined our subscriber list.</p>
+                                        <h4>Welcome to the Community!</h4>
+                                        <p>You'll receive updates on new books and insights into the recognition of your true nature.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1071,57 +1232,104 @@
             </div>
         </section>
 
-        <section class="book-showcase" id="about">
+        <section class="series-showcase" id="about">
             <div class="container">
-                <div class="showcase-grid">
-                    <div class="book-cover fade-in">
-                        <img src="UnbrokenMirror_ConversationsOnAwakening.jpg" alt="The Unbroken Mirror: Conversations on Awakening book cover" class="book-image">
+                <div class="series-intro fade-in">
+                    <h2>The Unbroken Mirror Series</h2>
+                    <p class="subtitle">A Revolutionary Approach to Spiritual Understanding</p>
+                    <div class="series-description">
+                        <p>This groundbreaking series guides readers beyond the endless cycle of spiritual seeking to the simple recognition of their true nature as pure awareness. Like an unbroken mirror that reflects all experience with perfect clarity while remaining untouched by what it reflects, your essential being has never been damaged and never stops being whole.</p>
+                        
+                        <p>This isn't another series about achieving enlightenment—it's an invitation to recognize the enlightenment you already are. Each book offers a different doorway to the same timeless recognition: you are the awareness in which all experience appears, and you have never been anything else.</p>
                     </div>
-                    
-                    <div class="book-info fade-in">
-                        <h2>You Are Already What You Seek</h2>
-                        <div class="book-description">
-                            <p><em>The Unbroken Mirror</em> presents 27 profound dialogues, pointers & practices and FAQs that gently guide you from the basic question "Who am I?" to the recognition of your true nature as pure awareness.</p>
-                            
-                            <p>Through contemporary conversations between genuine seekers and a wise teacher, discover why you've been looking everywhere for what you already are.</p>
-                            
-                            <p>This isn't another book about enlightenment – <strong>it's an invitation to recognize the enlightenment you already are.</strong></p>
+                </div>
+
+                <div class="books-grid" id="books">
+                    <div class="book-card fade-in">
+                        <div class="book-cover-container">
+                            <img src="UnbrokenMirror_AGuideToEffortlessBeing.jpg" alt="The Unbroken Mirror: A Guide to Effortless Being book cover" class="book-cover-image">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-number">Book 1</span>
+                            <h3>The Unbroken Mirror</h3>
+                            <p class="book-subtitle">A Guide to Effortless Being</p>
+                            <p class="book-description">Lays the foundation through clear prose, revealing the awareness that's reading these words right now. Discover how to find freedom from mental commentary, live with natural presence & peace, and recognize the difference between who you think you are and what you actually are.</p>
+                            <div class="book-links">
+                                <a href="https://www.amazon.com/Unbroken-Mirror-Guide-Effortless-Being/dp/B0FCMLJPX2/" class="book-link primary" target="_blank">
+                                    <span>Amazon Paperback</span>
+                                </a>
+                                <a href="https://www.amazon.com/Unbroken-Mirror-Guide-Effortless-Being-ebook/dp/B0FCDSR352/" class="book-link secondary" target="_blank">
+                                    <span>Kindle Edition</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card fade-in">
+                        <div class="book-cover-container">
+                            <img src="UnbrokenMirror_ConversationsOnAwakening.jpg" alt="The Unbroken Mirror Book 2: Conversations on Awakening book cover" class="book-cover-image">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-number">Book 2</span>
+                            <h3>The Unbroken Mirror</h3>
+                            <p class="book-subtitle">Conversations on Awakening</p>
+                            <p class="book-description">Deepens the understanding through 27 profound dialogues between seekers and teacher, complemented by practical pointers, contemplations, and FAQs. Experience how recognition transforms ordinary moments into gateways to truth.</p>
+                            <div class="book-links">
+                                <a href="https://www.amazon.com/Unbroken-Mirror-Conversations-Awakening/dp/B0FB9KBM2X/" class="book-link primary" target="_blank">
+                                    <span>Amazon Paperback</span>
+                                </a>
+                                <a href="https://www.amazon.com/Unbroken-Mirror-Conversations-Awakening-ebook/dp/B0FB4ZTJ99/" class="book-link secondary" target="_blank">
+                                    <span>Kindle Edition</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="book-card fade-in coming-soon">
+                        <div class="book-cover-container">
+                            <img src="UnbrokenMirror_ThirdBook.jpg" alt="The Unbroken Mirror Book 3 - Coming Soon" class="book-cover-image" style="opacity: 0.6;">
+                        </div>
+                        <div class="book-info">
+                            <span class="book-number">Book 3</span>
+                            <h3>The Unbroken Mirror</h3>
+                            <p class="book-subtitle">Coming Soon</p>
+                            <p class="book-description">Continues this exploration through a unique format that will surprise and delight readers, offering fresh perspectives on the pathless path to what you've always been.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="features" id="features">
+        <section class="series-benefits" id="benefits">
             <div class="container">
-                <h2 class="fade-in">What Makes This Book Different</h2>
-                <div class="features-grid">
-                    <div class="feature-card fade-in">
-                        <h3>Fresh, Modern Language</h3>
-                        <p>Ancient wisdom made instantly accessible through contemporary language that speaks to today's seekers without complex jargon or exotic terminology.</p>
+                <h2 class="fade-in">Why This Series is Different</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in">
+                        <h3>No Complex Practices Required</h3>
+                        <p>Everything points to your immediate, present experience. No meditation retreats, special states, or years of training needed—just honest looking at what's already here.</p>
                     </div>
                     
-                    <div class="feature-card fade-in">
-                        <h3>Direct Experience</h3>
-                        <p>Everything points to your immediate experience. No meditation retreats, special states, or years of training needed – just honest looking at what's already here.</p>
+                    <div class="benefit-card fade-in">
+                        <h3>Modern, Accessible Language</h3>
+                        <p>Timeless wisdom made instantly understandable through contemporary language that speaks to today's seekers without complex jargon or exotic terminology.</p>
                     </div>
                     
-                    <div class="feature-card fade-in">
-                        <h3>Real-Life Applications</h3>
-                        <p>Each conversation addresses practical concerns: difficult emotions, relationships, work stress, and life transitions from the perspective of your true nature.</p>
+                    <div class="benefit-card fade-in">
+                        <h3>Progressive Yet Complete</h3>
+                        <p>Each book stands alone while building toward deeper recognition. Start anywhere in the series and find complete understanding.</p>
                     </div>
                     
-                    <div class="feature-card fade-in">
-                        <h3>Progressive Structure</h3>
-                        <p>Meets you wherever you are on your journey, building naturally from basic questions to the deepest recognition of what you truly are.</p>
+                    <div class="benefit-card fade-in">
+                        <h3>Practical Integration</h3>
+                        <p>Shows how this understanding transforms daily life naturally—relationships, work stress, difficult emotions, and life transitions from the perspective of your true nature.</p>
                     </div>
                     
-                    <div class="feature-card fade-in">
-                        <h3>Direct Pointers</h3>
-                        <p>Immediate contemplations and investigations you can explore right now, pointing directly to the awareness you have never not been.</p>
+                    <div class="benefit-card fade-in">
+                        <h3>Universal Principles</h3>
+                        <p>Presented without religious dogma or exotic concepts. These insights transcend all spiritual traditions while honoring the essence of each.</p>
                     </div>
                     
-                    <div class="feature-card fade-in">
+                    <div class="benefit-card fade-in">
                         <h3>End of Seeking</h3>
                         <p>Discover why spiritual seeking keeps you from finding what you already are, and how recognition transforms the search into natural being.</p>
                     </div>
@@ -1183,7 +1391,6 @@
                         </div>
                     </div>
 
-
                     <div class="article-card fade-in">
                         <div class="article-content">
                             <div class="article-meta">
@@ -1199,11 +1406,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </section>
@@ -1212,7 +1414,7 @@
             <div class="container">
                 <div class="author-grid">
                     <div class="author-photo fade-in">
-                        <img src="author.jpg" alt="M.G. Ertosun, PhD - Author of The Unbroken Mirror" class="author-image">
+                        <img src="author.jpg" alt="M.G. Ertosun, PhD - Author of The Unbroken Mirror Series" class="author-image">
                     </div>
                     
                     <div class="author-content fade-in">
@@ -1224,7 +1426,7 @@
                             
                             <p>This inquiry led through various wisdom traditions—Buddhism and Christianity, Sufism and Judaism, Vedanta and Taoism. Not as a collector of beliefs or practices, but as a simple investigation into what remains constant across all seeking. Through years of meditation and contemplation, the same recognition kept emerging: <span class="highlight-text">what we seek, we already are.</span></p>
                             
-                            <p>The conversations in "The Unbroken Mirror: Conversations on Awakening" arise from a life that has moved between two worlds—the rigorous landscape of scientific inquiry and the timeless territory of spiritual recognition.</p>
+                            <p>The conversations in "The Unbroken Mirror Series" arise from a life that has moved between two worlds—the rigorous landscape of scientific inquiry and the timeless territory of spiritual recognition.</p>
                             
                             <p>These conversations aren't the result of special qualifications. They arise from the same awareness that is reading these words right now—the ordinary, obvious presence that we all are before we think we are anything in particular.</p>
                             
@@ -1235,8 +1437,6 @@
                             <p>These dialogues emerge from the recognition that consciousness exploring itself through science and consciousness exploring itself through spirituality are the same exploration. The electron microscope and the meditation cushion point toward the same mystery: the aware presence in which all experience arises and dissolves.</p>
                             
                             <p>The author continues to live and work in California, writing and sharing these conversations not as a teacher with special knowledge, but as awareness celebrating its own recognition through the beautiful play of apparent dialogue.</p>
-                            
-                            <p>After all, who is there to be an author when these words are consciousness writing about itself to itself?</p>
                             
                             <p style="font-style: italic; color: var(--primary-gold); font-weight: 500;">After all, who is there to be an author when these words are consciousness writing about itself to itself?</p>
                         </div>
@@ -1250,7 +1450,7 @@
                 <h2 class="fade-in">What Readers Are Experiencing</h2>
                 <div class="testimonial-grid">
                     <div class="testimonial fade-in">
-                        <p>This book doesn't teach you about truth – it points you directly to what you are. Every conversation felt like coming home to myself.</p>
+                        <p>This series doesn't teach you about truth – it points you directly to what you are. Every conversation felt like coming home to myself.</p>
                         <div class="testimonial-author">— Sarah M.</div>
                     </div>
                     
@@ -1260,7 +1460,7 @@
                     </div>
                     
                     <div class="testimonial fade-in">
-                        <p>I've read a lot of spiritual books, but this one made everything click. The recognition was immediate and obvious once I knew where to look.</p>
+                        <p>I've read a lot of spiritual books, but this series made everything click. The recognition was immediate and obvious once I knew where to look.</p>
                         <div class="testimonial-author">— Jennifer L.</div>
                     </div>
                 </div>
@@ -1273,8 +1473,9 @@
                 <p class="fade-in">The truth you seek is present right now, reading these very words. Your only choice is whether to recognize it today... or keep seeking for what you already are.</p>
                 
                 <div class="buy-buttons fade-in">
-                    <a href="https://www.amazon.com/dp/B0FB9KBM2X" class="btn" target="_blank">Buy on Amazon</a>
-                    <a href="https://www.amazon.com/dp/B0FB4ZTJ99" class="btn btn-secondary" target="_blank">Kindle Edition</a>
+                    <a href="https://www.amazon.com/dp/B0FCKWMSS6?binding=paperback" class="btn" target="_blank">Complete Series on Amazon</a>
+                    <a href="https://www.amazon.com/Unbroken-Mirror-Guide-Effortless-Being-ebook/dp/B0FCDSR352/" class="btn btn-secondary" target="_blank">Book 1: Guide to Effortless Being</a>
+                    <a href="https://www.amazon.com/Unbroken-Mirror-Conversations-Awakening-ebook/dp/B0FB4ZTJ99/" class="btn btn-secondary" target="_blank">Book 2: Conversations on Awakening</a>
                 </div>
                 
                 <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">Available in Paperback, Hardcover, and Digital formats</p>
@@ -1286,23 +1487,23 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>About the Book</h3>
-                    <p>The Unbroken Mirror offers 27 conversations that guide you to recognize your true nature as pure awareness, ending the search for what you already are.</p>
+                    <h3>About the Series</h3>
+                    <p>The Unbroken Mirror series offers a revolutionary approach to spiritual understanding, guiding you to recognize your true nature as pure awareness through progressive books that end the search for what you already are.</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Categories</h3>
-                    <p>Non-Dual Spirituality • Consciousness • Present Moment Awareness • Spiritual Self-Inquiry • Philosophy • Mindfulness</p>
+                    <h3>Perfect For Readers Of</h3>
+                    <p>Eckhart Tolle • Rupert Spira • Byron Katie • Jon Kabat-Zinn • Michael Singer • Zen Buddhism • Advaita Vedanta • Non-Dual Teachings • Consciousness Studies</p>
                 </div>
                 
                 <div class="footer-section">
-                    <h3>Perfect For</h3>
-                    <p>Longtime seekers ready to stop seeking, newcomers to non-dual understanding, readers of Eckhart Tolle, Rupert Spira, and Byron Katie.</p>
+                    <h3>The Books</h3>
+                    <p>Book 1: A Guide to Effortless Being • Book 2: Conversations on Awakening • Book 3: Coming Soon • Each complete yet building toward deeper recognition</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 The Unbroken Mirror. All rights reserved. | A guide to recognizing your true nature</p>
+                <p>&copy; 2025 The Unbroken Mirror Series. All rights reserved. | A revolutionary approach to spiritual understanding</p>
             </div>
         </div>
     </footer>
@@ -1355,8 +1556,8 @@
             lastScrollTop = scrollTop;
         });
 
-        const bookCover = document.querySelector('.book-cover .book-image');
-        if (bookCover) {
+        const bookCovers = document.querySelectorAll('.book-cover-image');
+        bookCovers.forEach(bookCover => {
             bookCover.addEventListener('mouseenter', () => {
                 bookCover.style.transform = 'translateY(-15px) scale(1.05) rotateY(5deg)';
                 bookCover.style.transition = 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
@@ -1365,7 +1566,7 @@
             bookCover.addEventListener('mouseleave', () => {
                 bookCover.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
             });
-        }
+        });
 
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
